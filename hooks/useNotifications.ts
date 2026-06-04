@@ -1,43 +1,56 @@
-// app/hooks/useNotifications.ts
 "use client";
 
-import { useConversation } from "@11labs/react";
 import { useEffect, useState } from "react";
 
 export function useNotifications(userId: number) {
-	const [notifications, setNotifications] = useState([]);
-	const conversation = useConversation({
-		onMessage: (message: string) => {
-			// Handle messages from ElevenLabs
-			console.log("Message from agent:", message);
-		},
-	});
+	const [notifications, setNotifications] = useState<any[]>([]);
+	const [unreadCount, setUnreadCount] = useState<number>(0);
+	const [isPollingEnabled, setIsPollingEnabled] = useState(true);
+
+	// Re-enable polling if userId changes
+	useEffect(() => {
+		setIsPollingEnabled(true);
+	}, [userId]);
 
 	useEffect(() => {
+		if (!isPollingEnabled) return;
+
 		const pollNotifications = async () => {
 			try {
 				const response = await fetch(`/api/notifications/user/${userId}`);
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
+				}
 				const data = await response.json();
 
-				if (data.notifications.length > 0) {
-					// If we have unread notifications and active conversation
-					// Let the AI agent know about them
-					if (conversation) {
-						await conversation.startSession({
-							text: `You have ${data.notifications.length} new notifications. Would you like me to read them to you?`,
-						});
-					}
+				if (data.success && data.notifications) {
 					setNotifications(data.notifications);
+					setUnreadCount(data.notifications.length);
+				} else {
+					setNotifications([]);
+					setUnreadCount(0);
 				}
 			} catch (error) {
-				console.error("Error polling notifications:", error);
+				if (process.env.NODE_ENV === "development") {
+					console.error("Error polling notifications:", error);
+				}
+				// Disable polling if API fails
+				setIsPollingEnabled(false);
+				
+				// Use fallback
+				setNotifications([]);
+				setUnreadCount(0);
 			}
 		};
 
-		// Poll every 30 seconds
-		const interval = setInterval(pollNotifications, 30000);
-		return () => clearInterval(interval);
-	}, [userId, conversation]);
+		// Run initial check
+		pollNotifications();
 
-	return notifications;
+		// Poll every 15 seconds
+		const interval = setInterval(pollNotifications, 15000);
+		
+		return () => clearInterval(interval);
+	}, [userId, isPollingEnabled]);
+
+	return { notifications, unreadCount };
 }

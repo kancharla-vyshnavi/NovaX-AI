@@ -73,21 +73,21 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🔑 API Keys Required
+## 🔑 Local Run (No API Keys Required)
 
-To run this project, you'll need the following API keys:
+This project has been converted to run **100% locally with zero configuration**. You do not need any API keys or databases to run it! 
 
-- Eleven Labs API key
-- Twilio API credentials
-- OpenWeatherMap API key (for weather updates)
+- **Voice Synthesis & Recognition**: Powered by the browser's native Web Speech API (`SpeechSynthesis` and `SpeechRecognition`).
+- **Database & Scheduling**: Falls back to a local JSON file database (`lib/db/local-db.json`) and an in-memory Node.js scheduler if PostgreSQL and QStash keys are not set.
 
-Create a `.env` file in the root directory and add your keys:
+### Optional configuration (for cloud databases/integrations)
+If you wish to run with cloud configurations, you can create a `.env` file in the root directory:
 
 ```env
-ELEVEN_LABS_API_KEY=your_key_here
-TWILIO_ACCOUNT_SID=your_sid_here
-TWILIO_AUTH_TOKEN=your_token_here
-OPENWEATHERMAP_API_KEY=your_key_here
+POSTGRES_URL=your_postgres_connection_string
+QSTASH_TOKEN=your_qstash_token
+OPENAI_API_KEY=your_openai_key_here
+NEXT_PUBLIC_POSTHOG_KEY=your_posthog_key_here
 ```
 
 ## 🎥 Demo Features

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "name": "NovaX AI User",
+      "email": "friend@voicecare.ai",
+      "phone_number": "+1555123456"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": 1,
+      "user_id": 1,
+      "type": "reminder",
+      "title": "Medication: My heart pills",
+      "event_time": "2026-06-05T02:30:00.000Z",
+      "notification_time": "2026-06-05T02:30:00.000Z"
+    }
+  ],
+  "notifications": [],
+  "emergencyContacts": []
+}
