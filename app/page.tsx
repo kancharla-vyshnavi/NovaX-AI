@@ -112,7 +112,29 @@ const DICTIONARY: Record<string, Record<string, string>> = {
 		speak_fail: "I encountered an error processing your query. Could you please repeat that?",
 		unclear: "I didn't catch that clearly. Could you please repeat?",
 		confirm_open: "Do you want me to open {site}?",
-		executed_open: "Action executed. Opening {site} in a new tab."
+		executed_open: "Action executed. Opening {site} in a new tab.",
+		weather_success: "The weather in {city} is {temp}°C and {condition}.",
+		weather_detail: "🌤️ Weather in {city}: {temp}°C | Condition: {condition} | Humidity: {humidity}% | Wind Speed: {windSpeed} m/s",
+		weather_speak: "Here is the weather in {city}. The temperature is {temp} degrees Celsius, condition is {condition}, humidity is {humidity} percent, and wind speed is {windSpeed} meters per second.",
+		weather_err_config: "Weather API is not configured yet.",
+		weather_err_fetch: "Failed to fetch weather data: {error}",
+		time_success: "It is {time} in {city}, {country}.",
+		time_success_short: "It is {time} in {city}.",
+		reminder_incomplete: "What should I remind you about and when?",
+		reminder_saved: "✅ Reminder saved successfully.",
+		reminder_saved_speak: "Reminder saved successfully.",
+		reminder_notify: "Reminder: {title}",
+		reminder_deleted: "Reminder deleted successfully.",
+		emergency_no_phone: "Please add caregiver emergency contact first.",
+		emergency_success: "Emergency alert sent to caregiver successfully.",
+		emergency_demo: "Demo mode: Emergency alert sent to {name} at {number}.",
+		emergency_fail: "Failed to send emergency alert: {error}",
+		youtube_open: "Opening YouTube for you.",
+		select_location_first: "Please select your country or city first.",
+		err_specify_reminder: "Please specify what needs to be reminded.",
+		err_pick_datetime: "Please pick a date and time for the reminder.",
+		err_mic_blocked: "Microphone access is blocked. Please enable it in browser settings.",
+		err_speech_unsupported: "Web Speech Recognition is not supported by your browser."
 	},
 	"hi-IN": {
 		welcome: "नमस्ते, मैं नोवा एक्स एआई हूँ, आपका बुद्धिमान व्यक्तिगत सहायक।",
@@ -133,7 +155,29 @@ const DICTIONARY: Record<string, Record<string, string>> = {
 		speak_fail: "मुझे आपके प्रश्न को संसाधित करने में त्रुटि हुई। क्या आप कृपया उसे दोहरा सकते हैं?",
 		unclear: "मैं स्पष्ट रूप से सुन नहीं पाया। क्या आप कृपया दोहरा सकते हैं?",
 		confirm_open: "क्या आप चाहते हैं कि मैं {site} खोलूं?",
-		executed_open: "कार्रवाई पूरी हुई। {site} को नए टैब में खोला जा रहा है।"
+		executed_open: "कार्रवाई पूरी हुई। {site} को नए टैब में खोला जा रहा है।",
+		weather_success: "{city} में मौसम {temp}°C और {condition} है।",
+		weather_detail: "🌤️ {city} में मौसम: {temp}°C | स्थिति: {condition} | आर्द्रता: {humidity}% | हवा की गति: {windSpeed} m/s",
+		weather_speak: "{city} में मौसम की जानकारी। तापमान {temp} डिग्री सेल्सियस है, स्थिति {condition} है, आर्द्रता {humidity} प्रतिशत है, और हवा की गति {windSpeed} मीटर प्रति सेकंड है।",
+		weather_err_config: "मौसम एपीआई अभी कॉन्फ़िगर नहीं किया गया है।",
+		weather_err_fetch: "मौसम डेटा प्राप्त करने में विफल: {error}",
+		time_success: "अभी {city}, {country} में समय {time} है।",
+		time_success_short: "अभी {city} में समय {time} है।",
+		reminder_incomplete: "मुझे आपको किस बारे में और कब याद दिलाना चाहिए?",
+		reminder_saved: "✅ अनुस्मारक सफलतापूर्वक सहेज लिया गया।",
+		reminder_saved_speak: "अनुस्मारक सफलतापूर्वक सहेज लिया गया।",
+		reminder_notify: "अनुस्मारक: {title}",
+		reminder_deleted: "अनुस्मारक सफलतापूर्वक हटा दिया गया।",
+		emergency_no_phone: "कृपया पहले देखभालकर्ता का आपातकालीन संपर्क जोड़ें।",
+		emergency_success: "आपातकालीन चेतावनी आपके देखभालकर्ता को भेज दी गई है।",
+		emergency_demo: "आपातकालीन चेतावनी आपके देखभालकर्ता को भेज दी गई है।",
+		emergency_fail: "आपातकालीन चेतावनी भेजने में विफल: {error}",
+		youtube_open: "आपके लिए यूट्यूब खोल रहा हूँ।",
+		select_location_first: "कृपया पहले अपना देश या शहर चुनें।",
+		err_specify_reminder: "कृपया निर्दिष्ट करें कि क्या याद दिलाना है।",
+		err_pick_datetime: "कृपया अनुस्मारक के लिए तारीख और समय चुनें।",
+		err_mic_blocked: "माइक्रोफ़ोन एक्सेस ब्लॉक है। कृपया ब्राउज़र सेटिंग्स में इसे सक्षम करें।",
+		err_speech_unsupported: "वेब स्पीच रिकग्निशन आपके ब्राउज़र द्वारा समर्थित नहीं है।"
 	},
 	"te-IN": {
 		welcome: "నమస్కారం, నేను నోవా ఎక్స్ ఐ, మీ తెలివైన వ్యక్తిగత సహాయకుడిని.",
@@ -154,7 +198,29 @@ const DICTIONARY: Record<string, Record<string, string>> = {
 		speak_fail: "మీ అభ్యర్థనను ప్రాసెస్ చేయడంలో లోపం సంభవించింది. దయచేసి మళ్లీ చెప్పండి.",
 		unclear: "నాకు స్పష్టంగా వినిపించలేదు. దయచేసి మళ్లీ చెప్పండి?",
 		confirm_open: "నేను {site} ఓపెన్ చేయాలా?",
-		executed_open: "చర్య విజయవంతమైంది. కొత్త ట్యాబ్‌లో {site} ఓపెన్ చేయబడుతోంది."
+		executed_open: "చర్య విజయవంతమైంది. కొత్త ట్యాబ్‌లో {site} ఓపెన్ చేయబడుతోంది.",
+		weather_success: "{city} లో వాతావరణం {temp}°C మరియు {condition} గా ఉంది.",
+		weather_detail: "🌤️ {city} లో వాతావరణం: {temp}°C | పరిస్థితి: {condition} | తేమ: {humidity}% | గాలి వేగం: {windSpeed} m/s",
+		weather_speak: "{city} లో వాతావరణ సమాచారం. ఉష్ణోగ్రత {temp} డిగ్రీల సెల్సియస్, వాతావరణం {condition}, తేమ {humidity} శాతం, మరియు గాలి వేగం సెకనుకు {windSpeed} మీటర్లు.",
+		weather_err_config: "వాతావరణ API ఇంకా కాన్ఫిగర్ చేయబడలేదు.",
+		weather_err_fetch: "వాతావరణ సమాచారాన్ని పొందడం విఫలమైంది: {error}",
+		time_success: "ఇప్పుడు {city}, {country} లో సమయం {time}.",
+		time_success_short: "ఇప్పుడు {city} లో సమయం {time}.",
+		reminder_incomplete: "నేను మీకు దేని గురించి మరియు ఎప్పుడు గుర్తు చేయాలి?",
+		reminder_saved: "✅ రిమైండర్ విజయవంతంగా సేవ్ చేయబడింది.",
+		reminder_saved_speak: "రిమైండర్ విజయవంతంగా సేవ్ చేయబడింది.",
+		reminder_notify: "రిమైండర్: {title}",
+		reminder_deleted: "రిమైండర్ విజయవంతంగా తొలగించబడింది.",
+		emergency_no_phone: "దయచేసి ముందుగా సంరక్షకుడి అత్యవసర సంప్రదింపు నంబర్‌ను జోడించండి.",
+		emergency_success: "అత్యవసర హెచ్చరిక మీ సంరక్షకుడికి పంపబడింది.",
+		emergency_demo: "అత్యవసర హెచ్చరిక మీ సంరక్షకుడికి పంపబడింది.",
+		emergency_fail: "అత్యవసర హెచ్చరికను పంపడం విఫలమైంది: {error}",
+		youtube_open: "మీ కోసం యూట్యూబ్ ఓపెన్ చేస్తున్నాను.",
+		select_location_first: "దయచేసి ముందుగా మీ దేశం లేదా నగరాన్ని ఎంచుకోండి.",
+		err_specify_reminder: "దయచేసి దేని గురించి గుర్తు చేయాలో పేర్కొనండి.",
+		err_pick_datetime: "దయచేసి రిమైండర్ కోసం తేదీ మరియు సమయాన్ని ఎంచుకోండి.",
+		err_mic_blocked: "మైక్రోఫోన్ యాక్సెస్ నిరోధించబడింది. దయచేసి బ్రౌజర్ సెట్టింగ్లలో దీన్ని ప్రారంభించండి.",
+		err_speech_unsupported: "వెబ్ స్పీచ్ రికగ్నిషన్ మీ బ్రౌజర్ ద్వారా మద్దతు ఇవ్వబడదు."
 	},
 	"ta-IN": {
 		welcome: "வணக்கம், நான் நோவா எக்ஸ் ஏஐ, உங்கள் புத்திசாலித்தனமான தனிப்பட்ட உதவியாளர்.",
@@ -175,7 +241,29 @@ const DICTIONARY: Record<string, Record<string, string>> = {
 		speak_fail: "செயலாக்குவதில் பிழை ஏற்பட்டது. தயவுசெய்து மீண்டும் கூறவும்.",
 		unclear: "எனக்கு தெளிவாக கேட்கவில்லை. தயவுசெய்து மீண்டும் கூறுவீர்களா?",
 		confirm_open: "நான் {site} திறக்க வேண்டுமா?",
-		executed_open: "சந்திப்பு {site} புதிய தாவலில் திறக்கப்படுகிறது."
+		executed_open: "சந்திப்பு {site} புதிய தாவலில் திறக்கப்படுகிறது.",
+		weather_success: "{city} இல் வானிலை {temp}°C மற்றும் {condition} ஆக உள்ளது.",
+		weather_detail: "🌤️ {city} இல் வானிலை: {temp}°C | நிலை: {condition} | ஈரப்பதம்: {humidity}% | காற்றின் வேகம்: {windSpeed} m/s",
+		weather_speak: "{city} இன் வானிலை விவரம். வெப்பநிலை {temp} டிகிரி செல்சியஸ், நிலை {condition}, ஈரப்பதம் {humidity} சதவீதம், மற்றும் காற்றின் வேகம் வினாடிக்கு {windSpeed} மீட்டர்.",
+		weather_err_config: "வானிலை API இன்னும் கட்டமைக்கப்படவில்லை.",
+		weather_err_fetch: "வானிலை தரவைப் பெறுவதில் தோல்வி: {error}",
+		time_success: "இப்போது {city}, {country} இல் நேரம் {time}.",
+		time_success_short: "இப்போது {city} இல் நேரம் {time}.",
+		reminder_incomplete: "நான் உங்களுக்கு எதைப் பற்றி எப்போது நினைவூட்ட வேண்டும்?",
+		reminder_saved: "✅ நினைவூட்டல் வெற்றிகரமாக சேமிக்கப்பட்டது.",
+		reminder_saved_speak: "நினைவூட்டல் வெற்றிகரமாக சேமிக்கப்பட்டது.",
+		reminder_notify: "நினைவூட்டல்: {title}",
+		reminder_deleted: "நினைவூட்டல் வெற்றிகரமாக நீக்கப்பட்டது.",
+		emergency_no_phone: "தயவுசெய்து முதலில் பராமரிப்பாளரின் அவசர தொடர்பைச் சேர்க்கவும்.",
+		emergency_success: "அவசரகால எச்சரிக்கை உங்கள் பராமரிப்பாளருக்கு அனுப்பப்பட்டது.",
+		emergency_demo: "அவசரகால எச்சரிக்கை உங்கள் பராமரிப்பாளருக்கு அனுப்பப்பட்டது.",
+		emergency_fail: "அவசரகால எச்சரிக்கையை அனுப்புவதில் தோல்வி: {error}",
+		youtube_open: "உங்களுக்காக யூடியூப் திறக்கிறேன்.",
+		select_location_first: "தயவுசெய்து முதலில் உங்கள் நாடு அல்லது நகரத்தைத் தேர்ந்தெடுக்கவும்.",
+		err_specify_reminder: "தயவுசெய்து என்ன நினைவூட்ட வேண்டும் என்பதைக் குறிப்பிடவும்.",
+		err_pick_datetime: "தயவுசெய்து நினைவூட்டலுக்கான தேதி மற்றும் நேரத்தைத் தேர்ந்தெடுக்கவும்.",
+		err_mic_blocked: "மைக்ரோஃபோன் அணுகல் தடுக்கப்பட்டுள்ளது. உலாவியின் அமைப்புகளில் அதைச் செயல்படுத்தவும்.",
+		err_speech_unsupported: "வலை பேச்சு அங்கீகாரம் உங்கள் உலாவியால் ஆதரிக்கப்படவில்லை."
 	},
 	"kn-IN": {
 		welcome: "ನಮಸ್ಕಾರ, ನಾನು ನೋವಾ ಎಕ್ಸ್ ಎಐ, ನಿಮ್ಮ ಬುದ್ಧಿವಂತ ವೈಯಕ್ತಿಕ ಸಹಾಯಕ.",
@@ -185,7 +273,7 @@ const DICTIONARY: Record<string, Record<string, string>> = {
 		confirm_stop_music: "ಮುಂದುವರಿಯುವ ಮೊದಲು ಅನುಮತಿ ಬೇಕು. ನಾನು ಸಂಗೀತವನ್ನು ನಿಲ್ಲಿಸಬೇಕೆ? ನಿಮ್ಮ ದೃಢೀಕರಣಕ್ಕಾಗಿ ಕಾಯುತ್ತಿದ್ದೇನೆ.",
 		confirm_sos: "ಮುಂದುವರಿಯುವ ಮೊದಲು ಅನುಮತಿ ಬೇಕು. ನಾನು ತುರ್ತು SOS ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬೇಕೆ? ನಿಮ್ಮ ದೃಢೀಕರಣಕ್ಕಾಗಿ ಕಾಯುತ್ತಿದ್ದೇನೆ.",
 		cancel: "ಕಾರ್ಯವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ. ನಿಮ್ಮ ಮುಂದಿನ ಆದೇಶಕ್ಕಾಗಿ ಕಾಯುತ್ತಿದ್ದೇನೆ.",
-		executed_reminder: "ಕಾರ್ಯಗತಗೊಳಿಸಲಾಗಿದೆ. {time} ಕ್ಕೆ {task} ಗಾಗಿ ಜ್ಞಾಪನೆ ಹೊಂದಿಸಲಾಗಿದೆ.",
+		executed_reminder: "ಕಾರ್ಯಗतಗೊಳಿಸಲಾಗಿದೆ. {time} ಕ್ಕೆ {task} ಗಾಗಿ ಜ್ಞಾಪನೆ ಹೊಂದಿಸಲಾಗಿದೆ.",
 		executed_appointment: "{time} ಕ್ಕೆ {title} ಗಾಗಿ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ನಿಗದಿಪಡಿಸಲಾಗಿದೆ.",
 		executed_music: "ಶಾಸ್ತ್ರೀಯ ಸಂಗೀತ ಪ್ರಾರಂಭವಾಗಿದೆ.",
 		executed_stop_music: "ಸಂಗೀತ ನಿಲ್ಲಿಸಲಾಗಿದೆ.",
@@ -345,6 +433,41 @@ const getTranslation = (key: string, params: Record<string, string> = {}, langCo
 	return text;
 };
 
+const translateCondition = (cond: string, lang: string): string => {
+	const c = cond.toLowerCase();
+	if (lang === "te-IN") {
+		if (c.includes("clear")) return "ప్రశాంతంగా";
+		if (c.includes("cloud")) return "మబ్బులతో";
+		if (c.includes("rain")) return "వర్షం";
+		if (c.includes("drizzle")) return "చిరుజల్లులు";
+		if (c.includes("thunderstorm")) return "తుఫాను";
+		if (c.includes("snow")) return "మంచు";
+		if (c.includes("mist") || c.includes("fog") || c.includes("haze")) return "పొగమంచు";
+		return cond;
+	}
+	if (lang === "hi-IN") {
+		if (c.includes("clear")) return "साफ";
+		if (c.includes("cloud")) return "बादल";
+		if (c.includes("rain")) return "बारिश";
+		if (c.includes("drizzle")) return "बूंदाबांदी";
+		if (c.includes("thunderstorm")) return "आंधी-तूफान";
+		if (c.includes("snow")) return "बर्फबारी";
+		if (c.includes("mist") || c.includes("fog") || c.includes("haze")) return "कोहरा";
+		return cond;
+	}
+	if (lang === "ta-IN") {
+		if (c.includes("clear")) return "தெளிவாக";
+		if (c.includes("cloud")) return "மேகமூட்டம்";
+		if (c.includes("rain")) return "மழை";
+		if (c.includes("drizzle")) return "சாரல் மழை";
+		if (c.includes("thunderstorm")) return "இடிமின்னல்";
+		if (c.includes("snow")) return "பனிப்பொழிவு";
+		if (c.includes("mist") || c.includes("fog") || c.includes("haze")) return "பனிமூட்டம்";
+		return cond;
+	}
+	return cond;
+};
+
 // Text Preprocessor for natural spoken names/dates
 const cleanTextForSpeech = (text: string, langCode: string): string => {
 	let clean = text;
@@ -417,8 +540,18 @@ const findBestVoice = (
 	systemVoices: SpeechSynthesisVoice[],
 	genderPref: string = "auto"
 ): SpeechSynthesisVoice | null => {
-	if (langCode || genderPref) { /* noop */ }
 	if (!systemVoices || systemVoices.length === 0) return null;
+	if (genderPref) { /* noop */ }
+
+	if (langCode && !langCode.toLowerCase().startsWith("en")) {
+		const targetLangLower = langCode.toLowerCase();
+		let match = systemVoices.find(v => v.lang.toLowerCase() === targetLangLower);
+		if (match) return match;
+
+		const prefix = targetLangLower.split("-")[0];
+		match = systemVoices.find(v => v.lang.toLowerCase().startsWith(prefix));
+		if (match) return match;
+	}
 
 	// 1. Exact match "Google UK English Female" (case-insensitive)
 	let match = systemVoices.find(v => v.name.toLowerCase() === "google uk english female");
@@ -1190,9 +1323,10 @@ export default function LandingPage() {
 
 	// Load settings and data
 	useEffect(() => {
+		let savedLang: string | null = null;
 		// Load from localStorage
 		if (typeof window !== "undefined") {
-			const savedLang = localStorage.getItem("novax_lang");
+			savedLang = localStorage.getItem("novax_lang");
 			if (savedLang) setActiveLang(savedLang);
 			
 			const savedAuto = localStorage.getItem("novax_auto_detect");
@@ -1249,7 +1383,8 @@ export default function LandingPage() {
 
 				if (availableVoices.length > 0) {
 					// On startup, automatically find and select locked voice, then save to localStorage
-					const best = findBestVoice(activeLang, availableVoices);
+					const initialLang = savedLang || "en-US";
+					const best = findBestVoice(initialLang, availableVoices);
 					if (best) {
 						setSelectedVoiceName(best.name);
 						localStorage.setItem("novax_voice_name", best.name);
@@ -1261,7 +1396,8 @@ export default function LandingPage() {
 			window.speechSynthesis.onvoiceschanged = loadBrowserVoices;
 			
 			// Initial welcome speech
-			const welcomeText = getTranslation("welcome", {}, activeLang);
+			const initialLang = savedLang || "en-US";
+			const welcomeText = getTranslation("welcome", {}, initialLang);
 			setMessages([
 				{
 					sender: "novax",
@@ -1271,7 +1407,7 @@ export default function LandingPage() {
 			]);
 			// delay speech slightly on mount for user interaction gesture rules
 			setTimeout(() => {
-				speak(welcomeText, activeLang);
+				speak(welcomeText, initialLang);
 			}, 1000);
 
 			return () => {
@@ -1377,13 +1513,9 @@ export default function LandingPage() {
 		}
 
 		// Mixed language matching (e.g. English keywords in a non-English session)
-		const hasIndianScript = /[\u0900-\u0d7f]/.test(text);
+		const hasIndianScript = /[\u0900-\u0d7f]/.test(text) || /[\u0600-\u06ff]/.test(text);
 		if (!hasIndianScript) {
-			const englishPatterns = /^(?:hello|hi|hey|weather|time|joke|help|emergency|how are you|good morning|good afternoon|good evening|bye|goodbye|open|launch)/i;
-			if (englishPatterns.test(text) || activeLang === "en-US") {
-				return "en-US";
-			}
-			return activeLang; // Continue in active lang for mixed text (e.g. "tablet" in a Hindi phrase)
+			return "en-US";
 		}
 
 		return "en-US";
@@ -1473,13 +1605,14 @@ export default function LandingPage() {
 								body: r.title,
 							});
 						} else {
-							alert(`Reminder: ${r.title}`);
+							alert(getTranslation("reminder_notify", { title: r.title }, activeLang));
 						}
-						toast.info(`Reminder: ${r.title}`);
+						toast.info(getTranslation("reminder_notify", { title: r.title }, activeLang));
 					}
 
-					speak(`Reminder: ${r.title}`, activeLang);
-					addNovaXMessage(`Reminder: ${r.title}`);
+					const speakText = getTranslation("reminder_notify", { title: r.title }, activeLang);
+					speak(speakText, activeLang);
+					addNovaXMessage(speakText);
 				});
 
 				const serializable = active.map(t => ({
@@ -1535,7 +1668,7 @@ export default function LandingPage() {
 	const startSpeechRecognition = () => {
 		const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 		if (!SpeechRecognition) {
-			toast.error("Web Speech Recognition is not supported by your browser.");
+			toast.error(getTranslation("err_speech_unsupported", {}, activeLang));
 			return;
 		}
 
@@ -1571,7 +1704,7 @@ export default function LandingPage() {
 			setIsListening(false);
 
 			if (event.error === "not-allowed") {
-				toast.error("Microphone access is blocked. Please enable it in browser settings.");
+				toast.error(getTranslation("err_mic_blocked", {}, activeLang));
 			}
 		};
 
@@ -1591,7 +1724,7 @@ export default function LandingPage() {
 	};
 
 	// Helper to fetch and display weather
-	const handleWeatherQuery = async (query: string) => {
+	const handleWeatherQuery = async (query: string, lang = activeLang) => {
 		setIsThinking(true);
 		if (process.env.NODE_ENV === "development") {
 			console.log("Weather request:", query);
@@ -1602,22 +1735,35 @@ export default function LandingPage() {
 				console.log("Weather result:", res);
 			}
 			if (res.success && res.location) {
-				const chatText = `🌤️ Weather in ${res.location}: ${res.tempC}°C | Condition: ${res.condition} | Humidity: ${res.humidity}% | Wind Speed: ${res.windSpeed} m/s`;
-				const speakText = `Here is the weather in ${res.location}. The temperature is ${res.tempC} degrees Celsius, condition is ${res.condition}, humidity is ${res.humidity} percent, and wind speed is ${res.windSpeed} meters per second.`;
+				const translatedCond = translateCondition(res.condition || "Unknown", lang);
+				const chatText = getTranslation("weather_detail", {
+					city: res.location,
+					temp: String(res.tempC),
+					condition: translatedCond,
+					humidity: String(res.humidity),
+					windSpeed: String(res.windSpeed)
+				}, lang);
+				const speakText = getTranslation("weather_speak", {
+					city: res.location,
+					temp: String(res.tempC),
+					condition: translatedCond,
+					humidity: String(res.humidity),
+					windSpeed: String(res.windSpeed)
+				}, lang);
 				addNovaXMessage(chatText);
-				speak(speakText, activeLang);
+				speak(speakText, lang);
 			} else {
 				const errMsg = res.error === "API key not configured"
-					? "Weather API is not configured yet."
-					: `Failed to fetch weather data: ${res.error || "Unknown error"}`;
+					? getTranslation("weather_err_config", {}, lang)
+					: getTranslation("weather_err_fetch", { error: res.error || "Unknown error" }, lang);
 				addNovaXMessage(errMsg);
-				speak(errMsg, activeLang);
+				speak(errMsg, lang);
 			}
 		} catch (err: any) {
 			console.error(err);
-			const errMsg = `Failed to fetch weather data: ${err.message || "Unknown error"}`;
+			const errMsg = getTranslation("weather_err_fetch", { error: err.message || "Unknown error" }, lang);
 			addNovaXMessage(errMsg);
-				speak(errMsg, activeLang);
+			speak(errMsg, lang);
 		} finally {
 			setIsThinking(false);
 		}
@@ -1647,11 +1793,18 @@ export default function LandingPage() {
 		setManualReminderTime("");
 
 		// Toast success and add message
-		toast.success("Reminder saved successfully");
-		addNovaXMessage("✅ Reminder saved successfully.");
+		const toastMsg = lang === "te-IN" ? "రిమైండర్ విజయవంతంగా సేవ్ చేయబడింది" : 
+		                 lang === "hi-IN" ? "अनुस्मारक सफलतापूर्वक सहेज लिया गया" : 
+		                 lang === "ta-IN" ? "நினைவூட்டல் வெற்றிகரமாக சேமிக்கப்பட்டது" : 
+		                 "Reminder saved successfully";
+		toast.success(toastMsg);
+
+		const chatMsg = getTranslation("reminder_saved", {}, lang);
+		addNovaXMessage(chatMsg);
 
 		if (speakMode) {
-			speak("Reminder saved successfully.", lang);
+			const speakMsg = getTranslation("reminder_saved_speak", {}, lang);
+			speak(speakMsg, lang);
 		}
 	};
 
@@ -1679,7 +1832,7 @@ export default function LandingPage() {
 			if (typeof window !== "undefined") {
 				window.open("https://www.youtube.com", "_blank");
 			}
-			const reply = "Opening YouTube for you.";
+			const reply = getTranslation("youtube_open", {}, currentLang);
 			addNovaXMessage(reply);
 			speak(reply, currentLang);
 			return;
@@ -1709,7 +1862,7 @@ export default function LandingPage() {
 
 		if (isReminderCmd) {
 			if (isIncompleteReminder(rawText)) {
-				const incompletePrompt = "What should I remind you about and when?";
+				const incompletePrompt = getTranslation("reminder_incomplete", {}, currentLang);
 				addNovaXMessage(incompletePrompt);
 				speak(incompletePrompt, currentLang);
 				return;
@@ -1734,7 +1887,7 @@ export default function LandingPage() {
 		const isWeatherCmd = text.includes("weather") || text.includes("forecast") || text.includes("मौसम") || text.includes("వాతావరణం") || text.includes("வானிலை") || text.includes("ಹವಾಮಾನ") || text.includes("കാലാവസ്ഥ") || text.includes("ആবহাওয়া") || text.includes("हवामान") || text.includes("حالات");
 		if (isWeatherCmd) {
 			if (!selectedLocation) {
-				const reqMsg = "Please select your country or city first.";
+				const reqMsg = getTranslation("select_location_first", {}, currentLang);
 				addNovaXMessage(reqMsg);
 				speak(reqMsg, currentLang);
 				toast.warning(reqMsg);
@@ -1746,8 +1899,8 @@ export default function LandingPage() {
 				const res = await getWeatherAction(`weather in ${selectedLocation.city}`);
 				if (!res.success) {
 					const msg = res.error === "API key not configured"
-						? "Weather API is not configured yet."
-						: `Failed to fetch weather data: ${res.error || "Unknown error"}`;
+						? getTranslation("weather_err_config", {}, currentLang)
+						: getTranslation("weather_err_fetch", { error: res.error || "Unknown error" }, currentLang);
 					addNovaXMessage(msg);
 					speak(msg, currentLang);
 					if (res.error === "API key not configured") {
@@ -1760,9 +1913,23 @@ export default function LandingPage() {
 
 				const tempC = res.tempC;
 				const condition = (res.condition || "").toLowerCase();
-				const reply = `The weather in ${selectedLocation.city} is ${tempC}°C and ${condition}.`;
-				addNovaXMessage(reply);
-				speak(reply, currentLang);
+				const translatedCond = translateCondition(condition, currentLang);
+				const chatText = getTranslation("weather_detail", {
+					city: selectedLocation.city,
+					temp: String(tempC),
+					condition: translatedCond,
+					humidity: String(res.humidity),
+					windSpeed: String(res.windSpeed)
+				}, currentLang);
+				const speakText = getTranslation("weather_speak", {
+					city: selectedLocation.city,
+					temp: String(tempC),
+					condition: translatedCond,
+					humidity: String(res.humidity),
+					windSpeed: String(res.windSpeed)
+				}, currentLang);
+				addNovaXMessage(chatText);
+				speak(speakText, currentLang);
 			} catch (err: any) {
 				console.error(err);
 				const failText = getTranslation("speak_fail", {}, currentLang);
@@ -1778,7 +1945,7 @@ export default function LandingPage() {
 		const isTimeCmd = text.includes("time") || text.includes("clock") || text.includes("समय") || text.includes("సమయం") || text.includes("நேరం") || text.includes("ಸಮಯ") || text.includes("സമയം") || text.includes("সময়") || text.includes("वेळ") || text.includes("وقت");
 		if (isTimeCmd) {
 			if (!selectedLocation) {
-				const reqMsg = "Please select your country or city first.";
+				const reqMsg = getTranslation("select_location_first", {}, currentLang);
 				addNovaXMessage(reqMsg);
 				speak(reqMsg, currentLang);
 				toast.warning(reqMsg);
@@ -1792,7 +1959,11 @@ export default function LandingPage() {
 				hour12: true
 			});
 
-			const reply = `It is ${nowTime} in ${selectedLocation.city}, ${selectedLocation.country}.`;
+			const reply = getTranslation("time_success", {
+				time: nowTime,
+				city: selectedLocation.city,
+				country: selectedLocation.country
+			}, currentLang);
 			addNovaXMessage(reply);
 			speak(reply, currentLang);
 			return;
@@ -1810,7 +1981,7 @@ export default function LandingPage() {
 		// 7. Emergency SOS Intent
 		const isSosCmd = text.includes("help") || text.includes("emergency") || text.includes("sos") || text.includes("doctor") || text.includes("accident") || text.includes("अस्पताल") || text.includes("అత్యవసర") || text.includes("உදவி") || text.includes("ತುರ್ತು") || text.includes("സഹായം") || text.includes("জরুরি") || text.includes("ہنگامی");
 		if (isSosCmd) {
-			triggerEmergencySOS();
+			triggerEmergencySOS(currentLang);
 			return;
 		}
 
@@ -1849,12 +2020,16 @@ export default function LandingPage() {
 			tomorrow.setDate(tomorrow.getDate() + 1);
 			tomorrow.setHours(8, 0, 0, 0);
 			const absoluteDateTime = tomorrow.toISOString();
-			await saveReminderTask("Heart medication", absoluteDateTime, true, activeLang);
+			const translatedTitle = activeLang === "te-IN" ? "గుండె మందులు" : 
+			                       activeLang === "hi-IN" ? "दिल की दवा" : 
+			                       activeLang === "ta-IN" ? "இருதய மருந்து" : 
+			                       "Heart medication";
+			await saveReminderTask(translatedTitle, absoluteDateTime, true, activeLang);
 
 		} else if (commandKey === "check_weather") {
 			addUserMessage("Check the weather");
 			if (!selectedLocation) {
-				const reqMsg = "Please select your country or city first.";
+				const reqMsg = getTranslation("select_location_first", {}, activeLang);
 				addNovaXMessage(reqMsg);
 				speak(reqMsg, activeLang);
 				toast.warning(reqMsg);
@@ -1865,8 +2040,8 @@ export default function LandingPage() {
 				const res = await getWeatherAction(`weather in ${selectedLocation.city}`);
 				if (!res.success) {
 					const msg = res.error === "API key not configured"
-						? "Weather API is not configured yet."
-						: `Failed to fetch weather data: ${res.error || "Unknown error"}`;
+						? getTranslation("weather_err_config", {}, activeLang)
+						: getTranslation("weather_err_fetch", { error: res.error || "Unknown error" }, activeLang);
 					addNovaXMessage(msg);
 					speak(msg, activeLang);
 					if (res.error === "API key not configured") {
@@ -1879,10 +2054,24 @@ export default function LandingPage() {
 
 				const tempC = res.tempC;
 				const condition = (res.condition || "").toLowerCase();
-				const reply = `The weather in ${selectedLocation.city} is ${tempC}°C and ${condition}.`;
-				addNovaXMessage(reply);
-				speak(reply, activeLang);
-			} catch (err) {
+				const translatedCond = translateCondition(condition, activeLang);
+				const chatText = getTranslation("weather_detail", {
+					city: selectedLocation.city,
+					temp: String(tempC),
+					condition: translatedCond,
+					humidity: String(res.humidity),
+					windSpeed: String(res.windSpeed)
+				}, activeLang);
+				const speakText = getTranslation("weather_speak", {
+					city: selectedLocation.city,
+					temp: String(tempC),
+					condition: translatedCond,
+					humidity: String(res.humidity),
+					windSpeed: String(res.windSpeed)
+				}, activeLang);
+				addNovaXMessage(chatText);
+				speak(speakText, activeLang);
+			} catch (err: any) {
 				console.error(err);
 				const failText = getTranslation("speak_fail", {}, activeLang);
 				addNovaXMessage(failText);
@@ -1894,7 +2083,7 @@ export default function LandingPage() {
 		} else if (commandKey === "check_time") {
 			addUserMessage("What time is it?");
 			if (!selectedLocation) {
-				const reqMsg = "Please select your country or city first.";
+				const reqMsg = getTranslation("select_location_first", {}, activeLang);
 				addNovaXMessage(reqMsg);
 				speak(reqMsg, activeLang);
 				toast.warning(reqMsg);
@@ -1906,23 +2095,27 @@ export default function LandingPage() {
 				minute: "2-digit",
 				hour12: true
 			});
-			const reply = `It is ${nowTime} in ${selectedLocation.city}, ${selectedLocation.country}.`;
+			const reply = getTranslation("time_success", {
+				time: nowTime,
+				city: selectedLocation.city,
+				country: selectedLocation.country
+			}, activeLang);
 			addNovaXMessage(reply);
 			speak(reply, activeLang);
 
 		} else if (commandKey === "emergency_sos") {
-			triggerEmergencySOS();
+			triggerEmergencySOS(activeLang);
 		}
 	};
 
 	// Manual Reminder Creator
 	const handleManualReminderSubmit = async (speakMode = false) => {
 		if (!manualReminderTitle.trim()) {
-			toast.error("Please specify what needs to be reminded.");
+			toast.error(getTranslation("err_specify_reminder", {}, activeLang));
 			return;
 		}
 		if (!manualReminderDate || !manualReminderTime) {
-			toast.error("Please pick a date and time for the reminder.");
+			toast.error(getTranslation("err_pick_datetime", {}, activeLang));
 			return;
 		}
 
@@ -1949,11 +2142,11 @@ export default function LandingPage() {
 		}));
 		localStorage.setItem("novax_reminders", JSON.stringify(serializable));
 
-		toast.success("Reminder deleted successfully.");
+		toast.success(getTranslation("reminder_deleted", {}, activeLang));
 	};
 
 	// Trigger emergency alert workflow
-	const triggerEmergencySOS = async () => {
+	const triggerEmergencySOS = async (lang = activeLang) => {
 		if (typeof window !== "undefined" && window.speechSynthesis) {
 			window.speechSynthesis.cancel();
 			setIsSpeaking(false);
@@ -1962,9 +2155,9 @@ export default function LandingPage() {
 		addUserMessage("Trigger emergency help protocol");
 
 		if (!caregiverPhone || !caregiverPhone.trim()) {
-			const msg = "Please add caregiver emergency contact first.";
+			const msg = getTranslation("emergency_no_phone", {}, lang);
 			addNovaXMessage(msg);
-			speak(msg, activeLang);
+			speak(msg, lang);
 			toast.warning(msg);
 			return;
 		}
@@ -1979,21 +2172,23 @@ export default function LandingPage() {
 		// Also send SMS if Twilio is configured
 		const res = await triggerEmergencyAction(fullPhone);
 		if (res.success) {
-			const msg = "Emergency alert sent to caregiver successfully.";
+			const msg = getTranslation("emergency_success", {}, lang);
 			addNovaXMessage(msg);
-			speak(msg, activeLang);
+			speak(msg, lang);
 			toast.success(msg);
 		} else {
 			if (res.error === "Twilio not configured") {
-				const caregiverNumber = (caregiverPhoneCode ? caregiverPhoneCode + " " : "") + caregiverPhone;
-				const msg = `Demo mode: Emergency alert sent to ${caregiverName} at ${caregiverNumber}.`;
+				const msg = getTranslation("emergency_demo", {
+					name: caregiverName,
+					number: (caregiverPhoneCode ? caregiverPhoneCode + " " : "") + caregiverPhone
+				}, lang);
 				addNovaXMessage(msg);
-				speak(msg, activeLang);
+				speak(msg, lang);
 				toast.info(msg);
 			} else {
-				const msg = `Failed to send emergency alert: ${res.error}`;
+				const msg = getTranslation("emergency_fail", { error: res.error }, lang);
 				addNovaXMessage(msg);
-				speak(msg, activeLang);
+				speak(msg, lang);
 				toast.error(msg);
 			}
 		}
@@ -2407,7 +2602,7 @@ export default function LandingPage() {
 							<motion.button
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 0.95 }}
-								onClick={triggerEmergencySOS}
+								onClick={() => triggerEmergencySOS()}
 								className="relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-red-600 to-red-500 rounded-full shadow-[0_8px_32px_rgba(239,68,68,0.3)] hover:shadow-[0_16px_48px_rgba(239,68,68,0.5)] border border-red-300/20"
 							>
 								{/* Pulsing red ring background */}
